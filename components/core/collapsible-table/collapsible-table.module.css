@@ -1,0 +1,146 @@
+.hide {
+  display: none;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.wrapper {
+  width: 354px;
+  margin-top: 50px;
+  line-height: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #eceded;
+  font-family: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.wrapper-control {
+  justify-content: center;
+  padding: 16px 16px 10px 16px;
+  border-bottom: 1px solid #eceded;
+}
+
+.wrapper-label {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.wrapper-chevron {
+  &[data-rotate] {
+    transform: rotate(45deg);
+  }
+}
+
+.wrapper-label-icon {
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #eceded;
+}
+
+.wrapper-content {
+  padding: 0;
+  margin: 0;
+	overflow-y: auto;
+}
+
+.wrapper-panel {
+  margin-top: 12px;
+}
+
+.core {
+  margin: 0;
+}
+
+.core-item {
+  border-bottom: none;
+}
+
+.core-control {
+	position: relative;
+  padding: 0;
+  margin: 0;
+
+	:hover .t-action-group{
+		display: flex;
+	}
+}
+
+.core-chevron {
+  transform: rotate(-90deg);
+  &[data-rotate] {
+    transform: rotate(0deg);
+  }
+}
+
+.core-chevron-active {
+  margin-right: 10px;
+}
+
+.core-label {
+  font-weight: 500;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  padding: 9px 0px 9px 16px;
+}
+
+.core-label-active {
+  padding-left: 0;
+}
+
+.core-label-name {
+  padding-right: 4px;
+  text-transform: capitalize;
+}
+
+.core-label-value {
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+.core-content {
+  padding: 0;
+}
+
+.core-panel {
+  margin-left: 22.5px;
+  padding: 0;
+  border-left: 1px solid #50505033;
+}
+
+.t-action-group {
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	z-index: 10;
+}
+
+.t-action {
+	height: 20px;
+	padding: 0 0px;
+	margin-right: 8px;
+	margin-top: 0;
+	box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.08);
+}
+
+
+.t-tag {
+  background-color: #e6f2ff;
+  border: 1px solid #a0bffc;
+  border-radius: 4px;
+  font-size: 10px;
+  color: #0048c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+  height: 20px;
+  width: 20px;
+	text-transform: uppercase;
+}
