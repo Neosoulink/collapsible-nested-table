@@ -7,6 +7,7 @@ export type FormattedData = {
 export const formatDataToSafeTable = (data: ExpectedData): FormattedData | any => {
   const r: FormattedData = { tree: [], count: 0 };
 
+  if (data === null || data === undefined) return 'null';
   if (typeof data !== 'object') return data ?? 'unknown field';
 
   if (Array.isArray(data)) {
@@ -15,7 +16,7 @@ export const formatDataToSafeTable = (data: ExpectedData): FormattedData | any =
 
       if (typeof item === 'object') __ = formatDataToSafeTable(item);
 
-      r.tree = [...r.tree, ...__.tree];
+      r.tree = [...r.tree, ...(Array.isArray(__.tree) ? __.tree : [__.tree])];
       r.count += __.count;
     });
   }
